@@ -1,0 +1,73 @@
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333333;
+  margin: 2.5rem 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+section {
+  display: grid;
+  /* Cria uma grade responsiva: colunas de no mínimo 300px que se expandem */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem; /* Espaço entre os cartões */
+  max-width: 1200px; /* Largura máxima da grade na tela */
+  margin: 0 auto 4rem; /* Centraliza a section e dá espaço embaixo */
+  padding: 0 1.5rem;
+}
+
+.noticia {
+  display: flex;
+  flex-direction: column; /* Organiza os itens do card de cima para baixo */
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden; /* Garante que a imagem não "vaze" das bordas arredondadas */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* Efeito de flutuação ao passar o mouse sobre o card */
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  img {
+    width: 100%;
+    height: 200px; /* Fixa a altura das imagens para alinhar os cards */
+    object-fit: cover; /* Corta a imagem perfeitamente sem distorcer */
+  }
+
+h3 {
+    font-size: 1.25rem;
+    color: #222222;
+    padding: 1.2rem 1.2rem 0; /* Ajustei o padding para ficar mais alinhado */
+    margin: 0 0 1rem 0;
+    line-height: 1.4;
+    
+    /* Regra das 3 linhas isolada e sem bugs */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  a {
+    /* O 'auto' no primeiro valor da margem é o que empurra o botão para o final do card! */
+    margin: auto 1.2rem 1.5rem; 
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #004494;
+    }
+  }
+}

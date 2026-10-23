@@ -1,0 +1,67 @@
+.noticia {
+  max-width: 800px; /* Limita a largura para a leitura ficar confortável */
+  margin: 2rem auto; /* Centraliza a notícia na tela */
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra leve para dar um efeito de card */
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do container */
+    max-height: 450px; /* Evita que imagens muito altas quebrem o layout */
+    object-fit: cover; /* Corta a imagem proporcionalmente se necessário */
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    color: #222222;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 1.125rem;
+    color: #444444;
+    line-height: 1.8; /* Aumenta o espaçamento das linhas para facilitar a leitura */
+    margin-bottom: 2.5rem;
+    text-align: justify;
+  }
+
+  a {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #0056b3; /* Um azul mais elegante */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #004494;
+      transform: translateY(-2px); /* Efeito sutil de levantar o botão ao passar o mouse */
+      box-shadow: 0 4px 8px rgba(0, 86, 179, 0.3);
+    }
+  }
+}
+
+/* Responsividade para telas de celulares */
+@media (max-width: 600px) {
+  .noticia {
+    margin: 1rem;
+    padding: 1.5rem;
+
+    h1 {
+      font-size: 1.7rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<div class="noticia">
+    <img [src]="noticia.imagem" [alt]="noticia.titulo"/>
+
+    <h1>{{ noticia.titulo }}</h1>
+
+    <p>{{ noticia.conteudo }}</p>
+
+    <a href="#" (click)="voltar($event)" >Voltar</a>
+</div>
